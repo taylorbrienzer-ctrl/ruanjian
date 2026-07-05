@@ -19,6 +19,7 @@ lingshan-ai-guide/
     workflows/
       pages.yml
   .nojekyll
+  deploy-to-github.ps1
   official/
     scenic-package.zip
     scenic-package/
@@ -49,6 +50,12 @@ http://localhost:8080/
 3. GitHub Actions 托管：把本项目内容放入仓库根目录后启用 Pages 的 GitHub Actions，本项目已包含 `.github/workflows/pages.yml`。
 
 详细步骤见 `docs/04_github_pages_deployment.md`。
+
+如果已有目标仓库地址，可在本目录运行：
+
+```powershell
+.\deploy-to-github.ps1 -RepositoryUrl "https://github.com/<your-name>/<repo>.git"
+```
 
 ## 说明
 

@@ -36,3 +36,18 @@
 当前工作区 `C:\Users\32322\Desktop\bisai` 不是 Git 仓库，本机未安装 GitHub CLI，Codex 可用浏览器也不是已登录 GitHub 的 Chrome。因此无法在没有目标仓库信息的情况下直接替你推送。
 
 需要继续自动部署时，请提供目标仓库本地路径或 GitHub 仓库地址，或者明确允许创建一个新仓库并指定仓库名。
+
+## 已准备好的本地推送脚本
+
+本目录已经初始化为 Git 仓库，默认分支为 `main`。拿到目标仓库地址后，可在本目录运行：
+
+```powershell
+.\deploy-to-github.ps1 -RepositoryUrl "https://github.com/<your-name>/<repo>.git"
+```
+
+脚本会执行：
+
+1. 设置或更新 `origin` 远端。
+2. 提交本地未提交变更。
+3. 推送 `main` 分支。
+4. 提醒在 GitHub Pages 中选择 GitHub Actions。
