@@ -31,6 +31,8 @@
 3. 到 `Actions` 页面查看 `Deploy static site to GitHub Pages` 工作流。
 4. 部署成功后，页面地址会显示在工作流输出和仓库 `Settings -> Pages`。
 
+工作流会把 `index.html`、`assets/`、`docs/`、`README.md` 和 `.nojekyll` 复制到 `_site` 后部署，官方资料包仅作为本地佐证材料保留，不会进入 Pages 发布物。
+
 ## 当前限制
 
 当前工作区 `C:\Users\32322\Desktop\bisai` 不是 Git 仓库，本机未安装 GitHub CLI，Codex 可用浏览器也不是已登录 GitHub 的 Chrome。因此无法在没有目标仓库信息的情况下直接替你推送。
