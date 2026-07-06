@@ -41,6 +41,18 @@ http://localhost:8080/
 
 ## GitHub Pages 托管
 
+当前已部署仓库：
+
+```text
+https://github.com/taylorbrienzer-ctrl/ruanjian
+```
+
+线上页面：
+
+```text
+https://taylorbrienzer-ctrl.github.io/ruanjian/
+```
+
 将 `lingshan-ai-guide` 文件夹中的内容放到 GitHub Pages 仓库根目录，或放到仓库的 `docs/` 目录后在仓库 Settings -> Pages 中选择对应分支和目录。
 
 推荐方式：

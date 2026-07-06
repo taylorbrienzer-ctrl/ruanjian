@@ -2,6 +2,22 @@
 
 当前目录已经按静态站点组织，可作为 GitHub Pages 根目录部署。
 
+## 当前部署结果
+
+仓库地址：
+
+```text
+https://github.com/taylorbrienzer-ctrl/ruanjian
+```
+
+Pages 地址：
+
+```text
+https://taylorbrienzer-ctrl.github.io/ruanjian/
+```
+
+部署方式：GitHub Actions，工作流文件为 `.github/workflows/pages.yml`。
+
 ## 方式一：仓库根目录部署
 
 适合已有仓库或新建仓库。
@@ -35,9 +51,7 @@
 
 ## 当前限制
 
-当前工作区 `C:\Users\32322\Desktop\bisai` 不是 Git 仓库，本机未安装 GitHub CLI，Codex 可用浏览器也不是已登录 GitHub 的 Chrome。因此无法在没有目标仓库信息的情况下直接替你推送。
-
-需要继续自动部署时，请提供目标仓库本地路径或 GitHub 仓库地址，或者明确允许创建一个新仓库并指定仓库名。
+历史说明：最初工作区 `C:\Users\32322\Desktop\bisai` 不是 Git 仓库，本机未安装 GitHub CLI。获得目标仓库地址后，已将 `lingshan-ai-guide` 初始化为本地 Git 仓库并推送到 `taylorbrienzer-ctrl/ruanjian`。
 
 ## 已准备好的本地推送脚本
 
