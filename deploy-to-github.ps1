@@ -7,30 +7,42 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+function Invoke-Git {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string[]]$Arguments
+  )
+
+  & git @Arguments
+  if ($LASTEXITCODE -ne 0) {
+    throw "git $($Arguments -join ' ') failed with exit code $LASTEXITCODE"
+  }
+}
+
 if (-not (Test-Path ".git")) {
-  git init
-  git branch -M main
+  Invoke-Git @("init")
+  Invoke-Git @("branch", "-M", "main")
 }
 
-$currentBranch = (git branch --show-current).Trim()
+$currentBranch = (& git branch --show-current).Trim()
 if ($currentBranch -ne "main") {
-  git branch -M main
+  Invoke-Git @("branch", "-M", "main")
 }
 
-$hasRemote = git remote | Where-Object { $_ -eq $RemoteName }
+$hasRemote = & git remote | Where-Object { $_ -eq $RemoteName }
 if ($hasRemote) {
-  git remote set-url $RemoteName $RepositoryUrl
+  Invoke-Git @("remote", "set-url", $RemoteName, $RepositoryUrl)
 } else {
-  git remote add $RemoteName $RepositoryUrl
+  Invoke-Git @("remote", "add", $RemoteName, $RepositoryUrl)
 }
 
-git add .
-$pending = git status --porcelain
+Invoke-Git @("add", ".")
+$pending = & git status --porcelain
 if ($pending) {
-  git commit -m "Update Ling Shan AI guide frontend"
+  Invoke-Git @("commit", "-m", "Update Ling Shan AI guide frontend")
 }
 
-git push -u $RemoteName main
+Invoke-Git @("push", "-u", $RemoteName, "main")
 
 Write-Host ""
 Write-Host "Pushed to $RepositoryUrl"
