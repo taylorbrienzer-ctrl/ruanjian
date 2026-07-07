@@ -1,0 +1,73 @@
+{
+  "pages": [
+    {
+      "path": "pages/guide/index",
+      "style": {
+        "navigationBarTitleText": "灵山导览",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/routes/index",
+      "style": {
+        "navigationBarTitleText": "路线推荐",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/spots/index",
+      "style": {
+        "navigationBarTitleText": "景点讲解",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/service/index",
+      "style": {
+        "navigationBarTitleText": "行程服务",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/profile/index",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#66736C",
+    "selectedColor": "#2F5F4E",
+    "backgroundColor": "#FFFDF6",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/guide/index",
+        "text": "导览"
+      },
+      {
+        "pagePath": "pages/routes/index",
+        "text": "路线"
+      },
+      {
+        "pagePath": "pages/spots/index",
+        "text": "景点"
+      },
+      {
+        "pagePath": "pages/service/index",
+        "text": "服务"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "灵山AI数字人导览",
+    "navigationBarBackgroundColor": "#F4EFE3",
+    "backgroundColor": "#F4EFE3"
+  }
+}

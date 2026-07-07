@@ -7,6 +7,10 @@
 ```text
 lingshan-ai-guide/
   index.html
+  uni-app-lingshan/
+    pages/
+    manifest.json
+    pages.json
   assets/
     lingshan-hero.png
   docs/
@@ -15,6 +19,9 @@ lingshan-ai-guide/
     02_ui_research.md
     03_api_design.md
     04_github_pages_deployment.md
+    05_app_figma_uniapp_constraints.md
+    06_figma_app_design_spec.md
+    07_uniapp_development_handoff.md
   .github/
     workflows/
       pages.yml
@@ -72,3 +79,5 @@ https://taylorbrienzer-ctrl.github.io/ruanjian/
 ## 说明
 
 当前交付以“前端界面 + 后端接口设计”为边界。真实后端可按 `docs/03_api_design.md` 实现 REST、SSE 或 WebSocket 接口。
+
+移动 App 版本的设计与开发交接已补充在 `uni-app-lingshan/` 和 `docs/05-07` 中。Figma 插件工具当前未在 Codex 会话中暴露，需在 Figma 插件侧启动 MCP/连接后再同步设计稿。
